@@ -1,0 +1,207 @@
+           --------------------
+           JUpload - File Upload Applet - HowTo sign the applet ?
+           --------------------
+           --------------------
+           --------------------
+
+HowTo sign the applet ?
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+%{toc}
+
+
+
+* {Why do you need to sign the applet?}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  When running from a web site, within your browser, the applet needs to have access to the local filesystem, in order to
+  choose then upload the files. Thanks to Java protection, this is impossible ... unless specific prerequisite:
+  
+  * The applet must be signed. Non-signed applet mat never access the local filesystem.
+  
+  * The user must accept the applet certificate. The user then has the option to accept it for ever, or just for the
+  current session. If the user accepted 'for ever' the certificate, he/she can remove it by doing these actions:
+  
+    * Go to the <Java Control Panel> / Security / Certificates / Approved certificates, and remove the relevant certificate
+	
+    * Go to the <Java Control Panel> / General. In the <temporary Internet Files>, click on the <Parameter> button. Then,
+	click on the <Remove files...> button to clean the Java cache.
+  
+  [] 
+  
+  <<Take care about this:>> Once a certificate is permanently accepted on a browser, this browser will execute any 
+  applet signed by this certificate, without asking the user. So good practices are:
+  
+  * The keystore and the storepass must remain secret.
+  
+  * The validity of the certificate must be not too long (1 year seems a maximum to me).
+  
+  * For commercial use, a good practice is to have a certificate signed by a known <Certificate Autority>. You'll need 
+  to pay, for that...
+
+
+* {How to generate a certificate, signed by you own CA, with openssl ?}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Since Java 1.7 u51, the auto-signed applets may no more run with the 'all-permission' flag, that is, with disk access.
+	
+	You need to sign your applet with a certificate, which certificate being signed by an Certificate of Authority known by
+	the local configuration. You can either: create a certificate, and make it be signed by a trusted CA, or create your own CA, and use 
+	it to sign the 'base' certificate, you'll sign the applet with.
+	
+	This tutorial is based on these pages:
+	
+	* To create the CA: {{http://www.freebsdmadeeasy.com/tutorials/freebsd/create-a-ca-with-openssl.php}}
+	
+	* To create the certificate for signing the applet: {{http://www.freebsdmadeeasy.com/tutorials/web-server/apache-ssl-certs.php}}
+	
+	* Some interesting openssl and keytool commands: {{http://shib.kuleuven.be/docs/ssl_commands.shtml}}
+	
+	[]
+	
+	Here are the necessary steps :
+	
+	* Go to the fodler where you'll create your certificates
+	
+	* Copy the original openssl.cfg file to ./jupload.cfg
+	
+	* In the jupload.cfg file:
+	
+		* Change the 'dir' value, around line 42 (first line of the CA_default section)
+		
+		* You may change the 'default_days' value, to another value than 365 (wich stand for one years).
+		
+		* You can change all default values (parameter ended by '_default'), to avoid typing them for each certificate.
+		
+		[]
+		
+	* Create these folders:
+	
+		* ./jupload
+		
+		* ./jupload/certs
+		
+		* ./jupload/private
+		
+		* ./jupload/newcerts
+		
+		[] 
+		
+	* In the ./jupload folder, create these file:
+	
+		* echo 1000 > serial   (that is, for windows users : a 'serial' file, containing just the '1000' string)
+		
+		* An empty 'index.txt' file
+		
+		* For windows only, you'll have to create a 'rnd' file. To have a valid name, I created a 'a.rnd' file, in ./jupload
+		
+		[]
+		
+	* Back to the . folder
+	
+	* Create the Certificate Authority. Important: the common name asked when creating this certificate is the name of the 'publisher' of the CA, 
+	when it signs other certificate. This name should identify your company (for instance). It may be a different value as the 'Organisation', as 
+	asked also by openssl. 
+
+------------------------
+openssl req -new -x509 -days 3650 -extensions v3_ca -newkey rsa:2048 -keyout jupload/private/cakey.pem -out jupload/cacert.pem -config ./jupload.cfg
+------------------------
+
+	* [Useless?] Copy this CA to a format, which can be managed by keytool, the Java keystore management tools:
+
+------------------------
+[Useless?]  openssl x509 -outform der -in jupload/cacert.pem -out jupload/cacert.crt 
+------------------------
+
+	* Create the jupload Certificate. This certificate will be signed by the CA you juste created. You'll use it to sign the applet. We'll use 
+	the keytool java command to create the certificate. You'll be asked for the organization, name (...) for this new certificate.
+	
+------------------------
+keytool -genkey -keyalg rsa -alias "juploaddemo" -keystore YOUR_KEYSTORE.jks -storepass "secret" -validity 360
+------------------------
+
+	* You can check the content of your keystore with this command:
+	
+------------------------
+keytool -list -keystore YOUR_KEYSTORE.jks -storepass "secret"
+------------------------
+	
+	* Generate the request to the CA, for certificate signing:
+	
+------------------------
+keytool -certreq -v -alias "juploaddemo" -file jupload/certs/juploadDemoCARequest.csr -keystore YOUR_KEYSTORE.jks -storepass "secret" 
+------------------------
+	  
+	  * You can now sign the certificate with the CA. With the below command, your certificate will be signed for 1 year.
+
+------------------------
+[For windows only] set RANDFILE=./jupload/a.rnd
+[Ok for self owned CA] openssl x509 -req -in jupload/certs/juploadDemoCARequest.csr -CA jupload/cacert.pem -CAkey jupload/private/cakey.pem -CAcreateserial -out jupload/newcerts/juploadDemoCARequest.crt -days 365
+[Real command, but more checks on certificate attributes] openssl ca -days 365 -in jupload/certs/juploadDemoCARequest.csr -out jupload/newcerts/juploadDemoCARequest.crt
+------------------------
+
+	* As you do all manually, we have to concatenate the certificate chain:
+
+------------------------
+[Windows] copy jupload\newcerts\juploadDemoCARequest.crt + .\jupload\cacert.pem jupload\newcerts\juploadDemoCARequest.chain
+[Unix] cat jupload\newcerts\juploadDemoCARequest.crt .\jupload\cacert.pem > jupload\newcerts\juploadDemoCARequest.chain
+------------------------
+
+	* Before importing the signed certificate, you must indicate that you trust this CA:
+
+------------------------
+keytool -import -trustcacerts -alias juploadca -file jupload/cacert.pem  -keystore YOUR_KEYSTORE.jks -storepass "secret" 
+------------------------
+
+	* The chain of certificates is built. You can now import it into your keystore. You should precise an alias (e.g.: -alias juploademo) if you're importing it 
+	into another keystore.
+
+------------------------
+keytool -import  -alias "juploaddemo" -file jupload\newcerts\juploadDemoCARequest.chain -keystore YOUR_KEYSTORE.jks -storepass "secret"
+------------------------
+
+
+
+  
+* {How to generate a certificate, with keytool ?}      
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+	With maven compilation, signing the applet is native. See the {{{./howto-compile.html}HowTo compile the applet}} page. But
+	you need to create a certificate, in order to sign the applet. Here are the java commands, to create a demo
+	certificate for JUpload:
+	
+	* <<[IMPORTANT NOTE : THIS PART IS OBSOLETE. IT WON'T WORK WITH JAVA VERSION FROM THE 1.7u51]>> Generate Private/Public key set (180 days = 6 months) :
+
+--------------------------------------------------------------------------------
+       keytool -genkey -alias "jupload" -validity 180 -dname "CN=JUpload, OU=Testing/Demo, O=JUpload.SourceForge.net, L=SourceForge, S=SourceForge, C=SG"
+--------------------------------------------------------------------------------
+
+	* List key set.
+
+--------------------------------------------------------------------------------
+       keytool -list
+--------------------------------------------------------------------------------
+
+	* Sign the Applet with the private key. You <<must do that after each modification of the jar package>>. You can use 
+	the below command, if you want to do this manually, or use the given ant or maven compilation scripts. All details on 
+	the {{{./howto-compile.html}HowTo compile the applet}} page. The command below allows you to sign the applet with a
+	'test' certificate: 
+
+--------------------------------------------------------------------------------
+       jarsigner wjhk.jupload.jar jupload
+--------------------------------------------------------------------------------
+
+	* Verify the jar file have being sign properly.
+
+--------------------------------------------------------------------------------
+       jarsigner -verify -certs -verbose wjhk.jupload.jar
+--------------------------------------------------------------------------------
+
+	[]
+
+	You can find more information, to sign the applet is provided by Martin Westin in this thread:
+	{{https://sourceforge.net/forum/forum.php?thread_id=2991519&forum_id=199106}}
