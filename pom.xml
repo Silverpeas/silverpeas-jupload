@@ -742,9 +742,9 @@
 			them, JUpload will use a generated keystore, with a certificate generated 
 			at compile time. BUT: if you want to PUBLISH the applet to real life users, 
 			you SHOULD define them. See the howto-compile on the JUpload site, for details -->
-		<jupload.keystore.alias>silverpeas</jupload.keystore.alias>
-		<jupload.keystore.filename>${env.SILVERPEAS_HOME}/bin/silverpeas.jks</jupload.keystore.filename>
-		<jupload.keystore.storepass>jupload-demo-pass</jupload.keystore.storepass>
+		<jupload.keystore.alias>${keystore.alias}</jupload.keystore.alias>
+		<jupload.keystore.filename>${keystore.filename}</jupload.keystore.filename>
+		<jupload.keystore.storepass>${keystore.storepass}</jupload.keystore.storepass>
 
 		<!-- The next parameters are mandatory only for publishing Maven artefact 
 			to your repositories, that is: when you use the "deploy" maven goal. Useless 
