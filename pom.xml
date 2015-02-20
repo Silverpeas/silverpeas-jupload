@@ -627,6 +627,8 @@
 							<alias>${jupload.keystore.alias}</alias>
 							<keystore>${jupload.keystore.filename}</keystore>
 							<storepass>${jupload.keystore.storepass}</storepass>
+              <tsa>http://tsa.starfieldtech.com/</tsa>
+              <verbose>true</verbose>
 							<removeExistingSignatures>true</removeExistingSignatures>
 						</configuration>
 					</execution>
