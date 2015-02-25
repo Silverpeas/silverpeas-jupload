@@ -1,4 +1,11 @@
 
+v5.1.1
+
+Change:
+- [Minor] New class parameter in sample PHP file: 'spaces_in_filenames'. When set to 'true' spaces in the uploaded file name are converted to '_' (underscore). (Credit: Cari D. Burstein)
+- [Minor] Documentation updates (broken links, howto-sign page was ugly...)
+- [Minor] Corrections and upgrade for the Bulgarian translation (thanks to Valentin Sheiretsky)
+
 
 v5.1.0
 

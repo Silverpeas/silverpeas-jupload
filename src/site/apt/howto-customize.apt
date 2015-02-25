@@ -84,10 +84,10 @@ postURL = http://localhost:9080/jupload/samples.java/parseRequest.jsp
 	
 	A first level of customization is available by using the DefaultUploadPolicy (that is, not provide any uploadPolicy applet
 	parameter), and use parameters available within the DefaultUploadPolicy, without any Java coding: these parameters are 
-	provided in HTML, within the APPLET tag that creates this applet. These parameters are described {{{E}below}}
+	provided in HTML, within the APPLET tag that creates this applet. These parameters are described {{{List_of_available_applet_parameters}below}}
 	
 	* As there is no uploadPolicy parameter, you can only use the parameters that are implemented in the DefaultUploadPolicy. 
-	See the column 'Implemented in' in the parameter list, {{{E}hereafter}}
+	See the column 'Implemented in' in the parameter list, {{{List_of_available_applet_parameters}hereafter}}
 	
 	* The main customizations available by applet parameters are listed here:
 	

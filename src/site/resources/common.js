@@ -1,5 +1,19 @@
 <!-- Common javascript functions for the demo site -->
 
+function docCertificate() {
+	//Doesn't work?  :-(
+	  document.writeln("  <center>");
+	  document.writeln("  	Since Java 1.7u51, to use the applet, you'll need to install our root certificate.");
+	  document.writeln("  	Before the applet was auto-signed. But now, you'll have to install");
+	  document.writeln("  	<a href="certificates/cacert.crt">this certificate (update 17 January 2014)</a> as a certificate authority.");
+	  document.writeln("  	Your browser will install it. For details, take a look at ");
+	  document.writeln("  	<a href='howto-sign.html#How_to_import_the_certificate_in_your_browser'>this page</a>,");
+	  document.writeln("  	especially if you're using Firefox.");
+	  document.writeln("  </center>");
+}
+
+  
+
 
 function footer() {
   document.writeln("  <center>");

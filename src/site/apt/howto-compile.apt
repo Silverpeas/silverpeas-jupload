@@ -18,12 +18,6 @@ HowTo-compile the applet ?
 ~~~~~~~~~~~~~~~~~~~~~~~
   The JUpload package is available from several sources:
   
-  * Compiled applet, ready to use: from the central Maven Repository. You can just download the compiled and signed applet
-  from this URL: {{http://repo1.maven.org/maven2/net/sf/jupload/}}. Just browser to the version you're looking for (or 
-  the last one, if you don't know), and download it. This applet is signed with the JUpload demo certificate. You should
-  sign it with your own certificate, before use. Check the {{{./howto-sign.html}HowTo sign the applet}} page, for 
-  details on this point.
-  
   * From JUpload release. Each release contains the <<sources>> and the <<compiled and signed applet>> jar file for the 
   JUpload project. You can create a project in your favorite IDE. See below for details on Eclipse and Netbeans.
   
@@ -31,8 +25,11 @@ HowTo-compile the applet ?
     that work is being run on SVN, especially that there is a risk of unstable versions.
     
   In both mode, we recommand to install {{{http://maven.apache.org/}maven}}, to get the most up-to-date compilation way. You'll
-  find all details, in the {{{D}How to install Maven?}}, below. You can also use ant build, with the given build.xml 
-  file. See details in the {{{E}Compile with the given Ant build file}} page, below.
+  find all details, in the {{{How_to_install_Maven}How to install Maven?}}, below. You can also use ant build, with the given build.xml 
+  file. See details in the {{{Compile_with_the_given_Ant_build_file}Compile with the given Ant build file}} page, below.
+  
+  Then, the applet is given with our demo certificate. You should sign it with your own certificate, before use. Check the 
+  {{{./howto-sign.html}HowTo sign the applet}} page, for details on this point.
 
 
 * {Eclipse, Netbeans or another IDE?}
@@ -324,11 +321,11 @@ yourJDKPath/jdk1.6.0_14/bin
 
     * <<For subclipse installation>>. If there is no 'Subclipse update site', add a new remote site, with this URL: 
 	http://subclipse.tigris.org/update_1.2.x
+	For details, you can go to {{{http://subclipse.tigris.org/}subclipse Eclipse plugin}}
 
     * <<For subversive installation>>. If there is no 'Subversive update site' in the list of update site you'll see there (that is: if you never installed 
-    a subversive for your Eclipse), add a new Eclipse update site, with this URL (for Eclipse 3.2 and 3.3): 
-    http://community.polarion.com/projects/subversive/download/Eclipse/2.0/galileo-site/
-    For details, you can go to {{{http://www.polarion.org/index.php?page=overview&project=subversive}subclipse Eclipse plugin}}
+    a subversive for your Eclipse), check this URL: {{https://www.eclipse.org/subversive/}}
+    
 
   * Click on the <Next> button to see the available packages on the choosen Eclipse update site.
 
@@ -501,7 +498,7 @@ yourJDKPath/jdk1.6.0_14/bin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   A general documentation, about using Maven with Netbeans, is available on this page: 
-  {{maven.apache.org/guides/mini/guide-ide-netbeans/guide-ide-netbeans.html}}.
+  {{http://maven.apache.org/guides/mini/guide-ide-netbeans/guide-ide-netbeans.html}}.
   
   Basically, maven support is native, starting from netbeans 6.8. But there is no debug support for the applet. So you 
   have to connect yourself your debugger to the applet. 

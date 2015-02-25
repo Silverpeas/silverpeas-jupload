@@ -29,6 +29,7 @@
 		<menu name="Technical documentation">
 			<item name="HowTo compile" href="howto-compile.html" />
 			<item name="HowTo sign the applet" href="howto-sign.html" />
+			<item name="HowTo deploy the certificate" href="howto-deploy_certificates.html" />
 			<item name="HowTo customize" href="howto-customize.html" />
 			<item name="Javadoc" href="apidocs/index.html" />
 			<item name="How upload works" href="apidocs/wjhk/jupload2/upload/package-summary.html" />

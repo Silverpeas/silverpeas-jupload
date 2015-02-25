@@ -391,7 +391,7 @@ Java 1.5 or higher plugin required.
   
   * {{./RELEASE-NOTES.txt}}: what's new in this relese (and full history)
   
-  * {{./site/wjhk.jupload.jar}}: <<The applet, ready to use>>
+  * {{./wjhk.jupload.jar}}: <<The applet, ready to use>>. You can download it towards your own server folder.
 
   
   Once the site is built with maven command <mvn site>, you can use /target/site as the root for a J2EE application server,

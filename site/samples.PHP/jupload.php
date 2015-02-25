@@ -134,8 +134,10 @@ class JUpload {
 		$classparams['create_destdir'] = true;
 		if (!isset($classparams['allow_subdirs']))
 		$classparams['allow_subdirs'] = false;
-		if (!isset($classparams['spaces_in_subdirs']))
+		if (!isset($classparams['spaces_in_subdirs']))           // set to true to convert spaces in directory names to _
 		$classparams['spaces_in_subdirs'] = false;
+		if (!isset($classparams['spaces_in_filenames']))         // set to true to convert spaces in filenames to _
+		$classparams['spaces_in_filenames'] = false;
 		if (!isset($classparams['allow_zerosized']))
 		$classparams['allow_zerosized'] = false;
 		if (!isset($classparams['duplicate']))
@@ -362,6 +364,9 @@ class JUpload {
 	 */
 	private function dstfinal(&$name, &$subdir) {
 		$name = preg_replace('![`$\\\\/|]!', '_', $name);
+		if ($this->classparams['spaces_in_filenames']) {
+			$name = str_replace(' ', '_', $name);
+		}
 		if ($this->classparams['allow_subdirs'] && ($subdir != '')) {
 			$subdir = trim(preg_replace('!\\\\!','/',$subdir),'/');
 			$subdir = preg_replace('![`$|]!', '_', $subdir);

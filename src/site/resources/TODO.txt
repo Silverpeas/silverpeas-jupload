@@ -4,10 +4,14 @@ As always, a lot of things can be made better:
 
 Main TODO list:
 
+- The CA Certificate, in the site, should be available with a mime type, so that Firefox under Windows 7 open it, 
+instead of display it.
+- Confirm when ce CA certificate must be deployed in the Java Control Panel, and when not. 
+ 
 - The list of translations is not correctly formated (lack of <br/> tag)
 
 
-- Executing parallel upload would be nice, at least with FTP.
+- Executing parallel upload would be nice, at least with FTP, and non chunked.
 
 - Javascript API :
   - execution : start upload (already exists)

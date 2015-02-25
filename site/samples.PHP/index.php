@@ -66,6 +66,11 @@ $appletParameters = array(
 		//Default value is ... maximum size for a file on the current FS. 2G is problably too much already.
         'maxFileSize' => '2G',
         //
+        // Chunk uploads allows you to split big files into chunks, to overcome the frequent maxUploadSize set on server side.
+        // The given PHP scripts, aligned with the applet behavior, receive the chunks, then rebuild the whole files once all the 
+        // chunks have been uploaded.
+        'maxChunkSize' => '5000000', //Default to 5M
+        //
         //In the sourceforge project structure, the applet jar file is one folder below. Default
         //configuration is ok, if wjhk.jupload.jar is in the same folder as the script containing this call.
         'archive' => '../wjhk.jupload.jar',

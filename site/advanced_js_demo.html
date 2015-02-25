@@ -30,7 +30,7 @@
 	    'type="application/x-java-applet;version=1.5" \
             CODE = "wjhk.jupload2.EmptyApplet" \
             ARCHIVE = "wjhk.jupload.jar" \
-            NAME = "JUploadApplet" \
+            NAME = "DummyApplet" \
             WIDTH = "0" \
             HEIGHT = "0" \
             type ="application/x-java-applet;version=1.6" \
@@ -38,7 +38,7 @@
 	    'scriptable=false ' +
 	    'pluginspage="http://java.sun.com/products/plugin/index.html#download"><noembed><xmp>');
 //--></script>
-<applet  CODE = "wjhk.jupload2.EmptyApplet" ARCHIVE = "wjhk.jupload.jar" WIDTH = "0" HEIGHT = "0" NAME = "JUploadApplet"></xmp>
+<applet  CODE = "wjhk.jupload2.EmptyApplet" ARCHIVE = "wjhk.jupload.jar" WIDTH = "0" HEIGHT = "0" NAME = "DummyApplet"></xmp>
     <PARAM NAME = CODE VALUE = "wjhk.jupload2.EmptyApplet" >
     <PARAM NAME = ARCHIVE VALUE = "wjhk.jupload.jar" >
     <PARAM NAME = NAME VALUE = "JUploadApplet" >
@@ -56,7 +56,7 @@ Java 1.5 or higher plugin required.
 </object>
 
 <!--
-<APPLET CODE = "wjhk.jupload2.EmptyApplet" ARCHIVE = "wjhk.jupload.jar" WIDTH = "0" HEIGHT = "0" NAME = "JUploadApplet">
+<APPLET CODE = "wjhk.jupload2.EmptyApplet" ARCHIVE = "wjhk.jupload.jar" WIDTH = "0" HEIGHT = "0" NAME = "DummyApplet">
 	<PARAM NAME = "type" VALUE="application/x-java-applet;version=1.6">
 	<PARAM NAME = "scriptable" VALUE="false">
 	</xmp>
@@ -71,6 +71,15 @@ Java 1.5 or higher plugin required.
 <H2>In this page, you can test all the applet parameters !</H2>
 <P><B>Caution:</B> The upload will work only if a valid postURL parameter is given.  By default, postURL points to 
 sourceforge.jupload.net. <BR>That also can be a Tomcat server, where the site webapp of jupload is deployed.</P>
+
+<p><b>
+	Since Java 1.7u51, to use the applet, you'll need to install our root certificate. Before the applet was auto-signed. 
+	<br/>
+	But now, you'll have to install <a href="certificates/cacert.crt">this certificate (updated on 26 January 2014)</a> as a 
+	certificate authority. Your browser will install it. 
+	<br/>For details, please read these explanation:  <a href='howto-deploy_certificates.html'>this page</a>.
+</b></p>
+
 <P>See the <a href="howto-customization.html#parameters">parameters list</a>, in the 
 <a href="howto-customization.html">HowTo customize it</a> page, for all details on the applet parameters.</P>
 

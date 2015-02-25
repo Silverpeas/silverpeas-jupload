@@ -34,7 +34,7 @@
 	    'type="application/x-java-applet;version=1.5" \
             CODE = "wjhk.jupload2.EmptyApplet" \
             ARCHIVE = "wjhk.jupload.jar" \
-            NAME = "JUploadApplet" \
+            NAME = "DummyApplet" \
             WIDTH = "0" \
             HEIGHT = "0" \
             type ="application/x-java-applet;version=1.6" \
@@ -42,7 +42,7 @@
 	    'scriptable=false ' +
 	    'pluginspage="http://java.sun.com/products/plugin/index.html#download"><noembed><xmp>');
 //--></script>
-<applet  CODE = "wjhk.jupload2.EmptyApplet" ARCHIVE = "wjhk.jupload.jar" WIDTH = "0" HEIGHT = "0" NAME = "JUploadApplet"></xmp>
+<applet  CODE = "wjhk.jupload2.EmptyApplet" ARCHIVE = "wjhk.jupload.jar" WIDTH = "0" HEIGHT = "0" NAME = "DummyApplet"></xmp>
     <PARAM NAME = CODE VALUE = "wjhk.jupload2.EmptyApplet" >
     <PARAM NAME = ARCHIVE VALUE = "wjhk.jupload.jar" >
     <PARAM NAME = NAME VALUE = "JUploadApplet" >
@@ -60,7 +60,7 @@ Java 1.5 or higher plugin required.
 </object>
 
 <!--
-<APPLET CODE = "wjhk.jupload2.EmptyApplet" ARCHIVE = "wjhk.jupload.jar" WIDTH = "0" HEIGHT = "0" NAME = "JUploadApplet">
+<APPLET CODE = "wjhk.jupload2.EmptyApplet" ARCHIVE = "wjhk.jupload.jar" WIDTH = "0" HEIGHT = "0" NAME = "DummyApplet">
 	<PARAM NAME = "type" VALUE="application/x-java-applet;version=1.6">
 	<PARAM NAME = "scriptable" VALUE="false">
 	</xmp>
@@ -72,18 +72,22 @@ Java 1.5 or higher plugin required.
 <!-- --------------------------     END OF THE DUMMY APPLET TAG            ------------------------------ -->
 <!-- ---------------------------------------------------------------------------------------------------- -->
 
+
+<font face="arial" color="red"><H1>JUpload - File Upload Applet</H1></font>
+<p>
+	Since Java 1.7u51, to use the applet, you'll need to install our root certificate. Before the applet was auto-signed. 
+	<br/>
+	But now, you'll have to install <a href="certificates/cacert.crt">this certificate (updated on 26 January 2014)</a> as a 
+	certificate authority. Your browser will install it. 
+	<br/>For details, please read these explanation:  <a href='howto-deploy_certificates.html'>this page</a>.
+</p>
+
+
 <table width="640" cellspacing="0" border="0">
-    <tr>
-        <td colspan="2" align="center"><font face="arial" size="+1"
-            color="red"><b><u>JUpload - File Upload
-        Applet</u></b></font></td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-    </tr>
+    <tr height="10"></tr>
     <tr>
         <td colspan="2" bgcolor="#3F7C98" align="center"><font
-            color="#FFFFFF">The applet : default mode </font></td>
+            color="#FFFFFF">The applet : picture mode </font></td>
     </tr>
     <tr>
         <td colspan="2" align="center"><br />

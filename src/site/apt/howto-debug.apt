@@ -29,7 +29,7 @@ HowTo-debug the applet (and get the debug ouput)?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	It's of course the better solution. With eclipse, it works nicely, provided that the first compilation was executing 
-	with the respect of the {{./howot-compile.html}HowTo compile}} hints.
+	with the respect of the {{./howto-compile.html}}HowTo compile} hints.
 	
 	You can also take a look at this page: {{http://jswat.sourceforge.net/howto-applet.shtml}}. It gives useful information
 	on how to debug the applet in 'real life' situation, within the browser, or with the applet viewer. 

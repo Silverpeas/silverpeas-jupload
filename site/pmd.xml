@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.3" timestamp="2014-01-15T13:19:26.218">
+<pmd version="4.3" timestamp="2014-05-01T19:55:34.552">
 <file name="H:\data\eclipse\jupload\target\checkout\src\main\java\wjhk\jupload2\EmptyApplet.java">
 <violation beginline="79" endline="81" begincolumn="12" endcolumn="5" rule="UnnecessaryConstructor" ruleset="Controversial Rules" package="wjhk.jupload2" class="EmptyApplet" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnnecessaryConstructor" priority="3">
 Avoid unnecessary constructors - the compiler will generate these for you
@@ -3312,115 +3312,115 @@ Avoid using Literals in Conditional Statements
 <violation beginline="166" endline="166" begincolumn="52" endcolumn="52" rule="AvoidLiteralsInIfCondition" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#AvoidLiteralsInIfCondition" priority="3">
 Avoid using Literals in Conditional Statements
 </violation>
-<violation beginline="183" endline="264" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+<violation beginline="183" endline="273" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
-<violation beginline="215" endline="215" begincolumn="69" endcolumn="72" rule="NullAssignment" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeRequest" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
+<violation beginline="224" endline="224" begincolumn="69" endcolumn="72" rule="NullAssignment" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeRequest" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
 Assigning an Object to null is a code smell.  Consider refactoring.
 </violation>
-<violation beginline="267" endline="270" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+<violation beginline="276" endline="279" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
-<violation beginline="273" endline="344" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+<violation beginline="282" endline="353" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
-<violation beginline="276" endline="287" begincolumn="17" endcolumn="57" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="workingDir" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'workingDir' (lines '276'-'287').
+<violation beginline="285" endline="296" begincolumn="17" endcolumn="57" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="workingDir" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'workingDir' (lines '285'-'296').
 </violation>
-<violation beginline="276" endline="298" begincolumn="17" endcolumn="47" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="workingDir" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'workingDir' (lines '276'-'298').
+<violation beginline="285" endline="307" begincolumn="17" endcolumn="47" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="workingDir" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'workingDir' (lines '285'-'307').
 </violation>
-<violation beginline="277" endline="284" begincolumn="17" endcolumn="58" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'action' (lines '277'-'284').
+<violation beginline="286" endline="293" begincolumn="17" endcolumn="58" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'action' (lines '286'-'293').
 </violation>
-<violation beginline="277" endline="303" begincolumn="17" endcolumn="56" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'action' (lines '277'-'303').
+<violation beginline="286" endline="312" begincolumn="17" endcolumn="56" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'action' (lines '286'-'312').
 </violation>
-<violation beginline="277" endline="317" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'action' (lines '277'-'317').
+<violation beginline="286" endline="326" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'action' (lines '286'-'326').
 </violation>
-<violation beginline="277" endline="344" begincolumn="16" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'action' (lines '277'-'344').
+<violation beginline="286" endline="353" begincolumn="16" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'action' (lines '286'-'353').
 </violation>
-<violation beginline="284" endline="303" begincolumn="17" endcolumn="56" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'action' (lines '284'-'303').
+<violation beginline="293" endline="312" begincolumn="17" endcolumn="56" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'action' (lines '293'-'312').
 </violation>
-<violation beginline="284" endline="317" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'action' (lines '284'-'317').
+<violation beginline="293" endline="326" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'action' (lines '293'-'326').
 </violation>
-<violation beginline="284" endline="344" begincolumn="17" endcolumn="58" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'action' (lines '284'-'344').
+<violation beginline="293" endline="353" begincolumn="17" endcolumn="58" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'action' (lines '293'-'353').
 </violation>
-<violation beginline="287" endline="291" begincolumn="17" endcolumn="58" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="workingDir" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'workingDir' (lines '287'-'291').
+<violation beginline="296" endline="300" begincolumn="17" endcolumn="58" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="workingDir" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'workingDir' (lines '296'-'300').
 </violation>
-<violation beginline="303" endline="305" begincolumn="17" endcolumn="55" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'action' (lines '303'-'305').
+<violation beginline="312" endline="314" begincolumn="17" endcolumn="55" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'action' (lines '312'-'314').
 </violation>
-<violation beginline="305" endline="317" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'action' (lines '305'-'317').
+<violation beginline="314" endline="326" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'action' (lines '314'-'326').
 </violation>
-<violation beginline="305" endline="344" begincolumn="17" endcolumn="55" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'action' (lines '305'-'344').
+<violation beginline="314" endline="353" begincolumn="17" endcolumn="55" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'action' (lines '314'-'353').
 </violation>
-<violation beginline="317" endline="319" begincolumn="13" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'action' (lines '317'-'319').
+<violation beginline="326" endline="328" begincolumn="13" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'action' (lines '326'-'328').
 </violation>
-<violation beginline="319" endline="327" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'action' (lines '319'-'327').
+<violation beginline="328" endline="336" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'action' (lines '328'-'336').
 </violation>
-<violation beginline="327" endline="330" begincolumn="13" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'action' (lines '327'-'330').
+<violation beginline="336" endline="339" begincolumn="13" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'action' (lines '336'-'339').
 </violation>
-<violation beginline="330" endline="344" begincolumn="13" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'action' (lines '330'-'344').
+<violation beginline="339" endline="353" begincolumn="13" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" variable="action" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'action' (lines '339'-'353').
 </violation>
-<violation beginline="331" endline="331" begincolumn="41" endcolumn="44" rule="AvoidLiteralsInIfCondition" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#AvoidLiteralsInIfCondition" priority="3">
+<violation beginline="340" endline="340" begincolumn="41" endcolumn="44" rule="AvoidLiteralsInIfCondition" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="beforeFile" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#AvoidLiteralsInIfCondition" priority="3">
 Avoid using Literals in Conditional Statements
 </violation>
-<violation beginline="347" endline="363" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+<violation beginline="356" endline="372" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
-<violation beginline="360" endline="360" begincolumn="36" endcolumn="39" rule="NullAssignment" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="cleanAll" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
+<violation beginline="369" endline="369" begincolumn="36" endcolumn="39" rule="NullAssignment" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="cleanAll" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
 Assigning an Object to null is a code smell.  Consider refactoring.
 </violation>
-<violation beginline="361" endline="361" begincolumn="41" endcolumn="44" rule="NullAssignment" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="cleanAll" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
+<violation beginline="370" endline="370" begincolumn="41" endcolumn="44" rule="NullAssignment" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="cleanAll" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
 Assigning an Object to null is a code smell.  Consider refactoring.
 </violation>
-<violation beginline="366" endline="382" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+<violation beginline="375" endline="391" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
-<violation beginline="368" endline="368" begincolumn="42" endcolumn="45" rule="AvoidLiteralsInIfCondition" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="cleanRequest" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#AvoidLiteralsInIfCondition" priority="3">
+<violation beginline="377" endline="377" begincolumn="42" endcolumn="45" rule="AvoidLiteralsInIfCondition" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="cleanRequest" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#AvoidLiteralsInIfCondition" priority="3">
 Avoid using Literals in Conditional Statements
 </violation>
-<violation beginline="379" endline="379" begincolumn="45" endcolumn="48" rule="NullAssignment" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="cleanRequest" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
+<violation beginline="388" endline="388" begincolumn="45" endcolumn="48" rule="NullAssignment" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="cleanRequest" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
 Assigning an Object to null is a code smell.  Consider refactoring.
 </violation>
-<violation beginline="388" endline="403" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+<violation beginline="397" endline="412" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
-<violation beginline="406" endline="410" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+<violation beginline="415" endline="419" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
-<violation beginline="413" endline="416" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+<violation beginline="422" endline="425" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
-<violation beginline="419" endline="423" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+<violation beginline="428" endline="432" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
-<violation beginline="458" endline="523" begincolumn="27" endcolumn="65" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="createDirectoryStructure" variable="foldersToCreate" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'foldersToCreate' (lines '458'-'523').
+<violation beginline="467" endline="532" begincolumn="27" endcolumn="65" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="createDirectoryStructure" variable="foldersToCreate" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'foldersToCreate' (lines '467'-'532').
 </violation>
-<violation beginline="468" endline="469" begincolumn="13" endcolumn="59" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="createDirectoryStructure" variable="folderName" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'folderName' (lines '468'-'469').
+<violation beginline="477" endline="478" begincolumn="13" endcolumn="59" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="createDirectoryStructure" variable="folderName" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'folderName' (lines '477'-'478').
 </violation>
-<violation beginline="474" endline="474" begincolumn="17" endcolumn="59" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="createDirectoryStructure" variable="intermediateFolderName" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'intermediateFolderName' (lines '474'-'474').
+<violation beginline="483" endline="483" begincolumn="17" endcolumn="59" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="createDirectoryStructure" variable="intermediateFolderName" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'intermediateFolderName' (lines '483'-'483').
 </violation>
-<violation beginline="474" endline="523" begincolumn="17" endcolumn="59" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="createDirectoryStructure" variable="intermediateFolderName" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'intermediateFolderName' (lines '474'-'523').
+<violation beginline="483" endline="532" begincolumn="17" endcolumn="59" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" method="createDirectoryStructure" variable="intermediateFolderName" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'intermediateFolderName' (lines '483'-'532').
 </violation>
-<violation beginline="526" endline="529" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+<violation beginline="535" endline="538" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Controversial Rules" package="wjhk.jupload2.upload" class="FileUploadThreadFTP" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
 </file>

@@ -43,10 +43,16 @@ HowTo-use the applet?
 * {Use the java sample}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+	With the below configuration, you have a functionnal server side script, which can accept the applet uploads. You'll have to execute
+	the applet from your preferred IDE, like eclipse. In the execution parameters for the applet, you'll have to configure the postURL
+	parameter to the values, as explained below.
+	
 	The java sample is a sample script: <<parseRequest.jsp>>. It manages the uploaded file(s) on server side. It is based on the Jakarta common-files package. Its 
 	main capabilities are:
 	
-	* Reading the uploaded file, and storing of it on the server (local) hard drive. The target path is defined in the <ourTempDirectory> variable, which default value is </tmp/>
+	* Reading the uploaded file, and storing of it on the server (local) hard drive. The target path is defined in the <ourTempDirectory> variable, 
+	which default value is </tmp/>. To change it, you'll have to update the <parseRequest.jsp> file : it's defined just at the beginning
+	of the script.
 	
 	* Concatenation of the chunk, when using the applet chunk mode. Each chunk is stored in the 'ourTempDirectory' path. Then, after receiving the last chunk, all chunk
 	are concatenated, to create the full file back. All chunks remain in the temp folder. This is useful for debug purpose. Please remember, that 
@@ -54,11 +60,11 @@ HowTo-use the applet?
 	
 	* Return various information in the upload response. These information can be read in the JUpload debug output. Please see the {{./howto-debug.html}} page.
 	
-	* Generate an error, to check the applet behavior. You should use the "error=true" parameter on the URL, to force the error generation. The URL could be something like this:
-	<http://localhost:8080/jupload/parseRequest.jsp?error=true>
+	* Generate an error, to check the applet behavior. You should use the "error=true" parameter on the URL, to force the error generation. The URL could be 
+	something like this: <http://localhost:8080/jupload/parseRequest.jsp?error=true>
 	
-	* Generate an warning, to check the applet behavior. You should use the "warning=true" parameter on the URL, to force the error generation. The URL could be something like this:
-	<http://localhost:8080/jupload/parseRequest.jsp?error=false&warning=true>
+	* Generate an warning, to check the applet behavior. You should use the "warning=true" parameter on the URL, to force the warning generation. The URL 
+	could be something like this: <http://localhost:8080/jupload/parseRequest.jsp?error=false&warning=true>
 	
 	[]
 	
@@ -72,20 +78,24 @@ HowTo-use the applet?
 	* Select </jupload> in the context path,
 	
 	* Select the full path of the sample.java folder, in the <URL to WAR file or folder>. For instance: 
-	<H:\appli\EclipsePortable\Data\workspace\jupload\src\site\resources\samples.java>
+	<H:\data\eclipse\jupload\src\site\resources\samples.java>
 	
 	* Click on the <Deploy> button
 	
 	* Check the deployment by using going to the fileupload.html file of this context. For example: {{http://localhost:8080/jupload/fileupload.html}}, where 8080 is the
 	port for your tomcat installation (8080 is actually the default one), and /jupload is the path you entered in the context path, here above.
 	
-	[]	 
+	[]
+	
+	 
 
 
 * {PHP Sample}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	The PHP sample is available in this folder: <./src/site/resources/samples.PHP>. It consists of three PHP files:
+
+	The PHP sample is available in this folder: <./src/site/resources/samples.PHP>. IT  is a sample fully functionnal webapp, written 
+	in PHP. It consists of three PHP files:
 	
 	* <<jupload.php>> is the main one. It contains a PHP class, which hides all JUpload complexity:
 	
@@ -104,4 +114,26 @@ HowTo-use the applet?
 	* <<after_upload.php>> is a sample of a page which manages the result of the upload.
 	
 	[] 
+	
+	To test the PHP sample on your local apache (httpd) installation, here are the steps to follow:
+	
+	* Be sure you properly built the applet (typically by the command <mvn clean install site>, see the {{./howto-compile.html}} page
+	for all details)
+	
+	* Open the <httpd.conf> file.
+	
+	* Add an alias, and add the relevant rights. For instance :
 
+---------------------------------------------------------------------------------------------------------
+Alias /jupload_site "H:\data\eclipse\jupload\target\site"
+<Directory "H:\data\eclipse\jupload\target\site">
+	Order deny,allow
+	Allow from all
+</Directory>
+---------------------------------------------------------------------------------------------------------
+
+	* You can then test the applet, and upload toward these PHP scripts, by using this URL: <http://localhost/jupload_site/samples.PHP/>  
+	
+	[]
+	
+	

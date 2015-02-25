@@ -7,7 +7,7 @@
 //
 // Created: 2007-01-01
 // Creator: etienne_sf
-// Last modified: $Date: 2011-12-10 14:54:17 +0100 (sam., 10 déc. 2011) $
+// Last modified: $Date: 2014-05-01 19:03:23 +0200 (jeu., 01 mai 2014) $
 //
 // This program is free software; you can redistribute it and/or modify it under
 // the terms of the GNU General Public License as published by the Free Software
@@ -192,8 +192,17 @@ public class FileUploadThreadFTP extends DefaultFileUploadThread {
                 // Let's forget this connection.
                 this.bConnected = false;
             } catch (IOException e) {
-                throw new JUploadIOException(e.getClass().getName()
-                        + " while checking FTP connection to the server", e);
+                // commons-net seems to more generate a specific exception, once
+                // migrated from 1.4.1 to 2.2.
+                // Let's check the error message. Hope it won't change,
+                // depending on the user settings..
+                if (e.getMessage().equals("Connection is not open")) {
+                    // Let's forget this connection.
+                    this.bConnected = false;
+                } else {
+                    throw new JUploadIOException(e.getClass().getName()
+                            + " while checking FTP connection to the server", e);
+                }
             }
         }
 
